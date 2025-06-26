@@ -1,0 +1,1241 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=laptop_chromebook" />
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
+    <!-- <script src="../path/to/flowbite/dist/flowbite.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        body {
+            background-image: url(img/fondo-hero.svg);
+            background-size: cover;
+            /* Asegura que la imagen cubra toda la pantalla */
+            background-position: center;
+            /* Centra la imagen */
+            background-repeat: no-repeat;
+            /* Evita que la imagen se repita */
+            /* background-attachment: fixed; */
+            /* Hace que la imagen de fondo no se mueva al hacer scroll */
+            height: 100vh;
+            /* Asegura que el fondo cubra toda la altura de la ventana */
+            overflow-x: hidden;
+        }
+
+        #puntoRojoRegistrar {
+            /* width: 8px;
+            height: 8px;
+            background-color: rgb(255, 48, 4, 0.8); */
+            /* border-radius: 50%; */
+            animation: escalarEnBucle 2s ease-in-out infinite;
+        }
+
+        .border-amarillo {
+            border-color: transparent;
+            border-radius: 6px;
+            transition: border-color 0.5s ease, border-width 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .border-amarillo:hover {
+            box-shadow:
+                0 -7px 6px rgb(204, 255, 195),
+                6px 0 6px rgb(178, 217, 245),
+                -8px 0 6px rgb(247, 237, 128);
+        }
+
+        /*  border amarillo nuevo: */
+        /*   .border-amarillo {
+            border-color: transparent;
+            border-radius: 3px;
+            transition: border-color 0.5s ease, border-width 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .border-amarillo:hover {
+            box-shadow:
+                /* Sombra exterior */
+        /*  0 -10px 8px rgb(204, 255, 195),
+                10px 0 8px rgb(178, 217, 245),
+                -10px 0 8px rgb(247, 237, 128),
+                0 10px 8px rgb(204, 255, 195),
+
+                ¿
+                inset 0 -5px 5px rgba(204, 255, 195, 0.5),
+                inset 5px 0 5px rgba(178, 217, 245, 0.5),
+                inset -5px 0 5px rgba(247, 237, 128, 0.5),
+                inset 0 5px 5px rgba(204, 255, 195, 0.5);
+        }
+ */
+        .azul-alineacion {
+            border-color: #ffe3a5;
+            border-width: 1px;
+            /* border-color: transparent; */
+            /* Color de borde inicial */
+            border-width: 0px;
+            /* Grosor inicial del borde */
+            transition: border-color 0.5s ease, border-width 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .azul-alineacion:hover {
+            /* border-color: transparent; */
+            z-index: 100;
+            border-radius: 8px;
+
+            /* Cambia el color del borde al pasar el ratón */
+            /* border-width: 3px; */
+            /* Grosor del borde al hacer hover */
+
+            box-shadow:
+                inset 0 -8px 8px rgb(69, 104, 245),
+                /* Sombra interior en la parte superior */
+                inset 0 8px 8px rgb(69, 104, 245),
+                /* Sombra interior en la parte inferior */
+                inset 8px 0 8px rgb(173, 248, 129),
+                /* Sombra interior en la derecha */
+                inset -8px 0 8px rgb(159, 207, 255),
+                /* Sombra interior en la izquierda */
+                0 -8px 8px rgb(69, 104, 245),
+                /* Sombra exterior en la parte superior */
+                0 8px 8px rgb(69, 104, 245),
+                /* Sombra exterior en la parte inferior */
+                8px 0 8px rgb(173, 248, 129),
+                /* Sombra exterior en la derecha */
+                -8px 0 8px rgb(159, 207, 255);
+            /* Sombra exterior en la izquierda */
+        }
+
+        .verde-evaluacion {
+            border-color: #ffe3a5;
+            border-width: 1px;
+            /* border-color: transparent; */
+            /* Color de borde inicial */
+            border-width: 0px;
+            /* Grosor inicial del borde */
+            transition: border-color 0.5s ease, border-width 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .verde-evaluacion:hover {
+            /* border-color: transparent; */
+            z-index: 100;
+            border-radius: 8px;
+
+            /* Cambia el color del borde al pasar el ratón */
+            /* border-width: 3px; */
+            /* Grosor del borde al hacer hover */
+
+            box-shadow:
+                inset 0 -8px 8px rgb(205, 255, 196),
+                /* Sombra interior en la parte superior */
+                inset 0 8px 8px rgb(69, 245, 134),
+                /* Sombra interior en la parte inferior */
+                inset 8px 0 8px rgb(173, 248, 129),
+                /* Sombra interior en la derecha */
+                inset -8px 0 8px rgb(159, 207, 255),
+                /* Sombra interior en la izquierda */
+                0 -8px 8px rgb(245, 236, 69),
+                /* Sombra exterior en la parte superior */
+                0 8px 8px rgb(161, 255, 129),
+                /* Sombra exterior en la parte inferior */
+                8px 0 8px rgb(173, 248, 129),
+                /* Sombra exterior en la derecha */
+                -8px 0 8px rgb(227, 255, 100);
+            /* Sombra exterior en la izquierda */
+        }
+
+
+
+
+        /*    .scroller {
+            opacity: 0;
+            filter: blur(5px);
+            transform: translateX(-100%);
+            transition: all 3s;
+        }
+
+        .show {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateX(0);
+        }
+ */
+
+
+        /*         .bi-patch-question {
+            font-size: 1.5rem;
+            color: #104e74;
+            animation: escalarEnBucle 2s ease-in-out infinite;
+
+        }*/
+
+        @keyframes escalarEnBucle {
+
+            0%,
+            100% {
+                transform: scale(1.1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .ondas {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 200px;
+            /* padding: 100px 20vw; */
+        }
+
+        .azuluno {
+            background: #2F4156;
+        }
+
+        .azuldos {
+            background: #567c8d;
+        }
+
+        .azultres {
+            background: #c8d9ec;
+        }
+
+        .azulcuatro {
+            background: #f5EFEB;
+        }
+
+
+        .custom-shape-divider-top-1729887734 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .custom-shape-divider-top-1729887734 svg {
+            position: relative;
+            display: block;
+            width: calc(102% + 1.3px);
+            height: 177px;
+        }
+
+        .custom-shape-divider-top-1729887734 .shape-fill {
+            fill: transparent;
+        }
+
+        .spacer {
+            aspect-ratio: 900/200;
+            width: 100%;
+            /*  height: 10%; */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .layer1 {
+            background-image: url(../layered-steps-haikei.svg);
+        }
+
+        .layer2 {
+            background-image: url(../ondas-hero-tres.svg);
+            /* background-image: url(../ondas-hero-dos.svg); */
+            /*  background-image: url(../layered-seccion-hero.svg); */
+
+        }
+
+        .layer4 {
+            background-image: url(../layer-angulo-amarillo.svg);
+
+        }
+
+        .marker {
+            width: 90px;
+            height: 90px;
+            border-radius: 40%;
+            box-shadow:
+                0 10px 30px hsla(188, 100%, 72%, 0.8),
+                /* Sombra azul en la parte superior */
+                0 10px 40px hsla(46, 99%, 46%, 0.8);
+            /* Sombra amarilla en la parte inferior */
+        }
+
+        .marker-2 {
+            width: 40%;
+            height: 40%;
+            /* border-radius: 40%;
+            box-shadow: */
+            /* 0 10px 30px hsla(189, 100%, 66%, 0.8), */
+            /* Sombra azul en la parte superior */
+            /* 0 10px 40px hsla(61, 100%, 75%, 0.8) */
+            ;
+            /* Sombra amarilla en la parte inferior */
+        }
+
+        .marker-3 {
+            width: 90px;
+            height: 90px;
+            border-radius: 40%;
+            box-shadow:
+                0 -5px 30px hsla(119, 99%, 66%, 0.8),
+                /* Sombra azul en la parte superior */
+                0 15px 30px hsla(202, 69%, 70%, 0.8);
+            /* Sombra amarilla en la parte inferior */
+        }
+
+        .marker-4 {
+            width: 90px;
+            height: 90px;
+            border-radius: 40%;
+            box-shadow:
+                0 -5px 30px hsla(131, 74%, 74%, 0.8),
+                /* Sombra azul en la parte superior */
+                0 10px 30px hsla(46, 94%, 53%, 0.8);
+            /* Sombra amarilla en la parte inferior */
+        }
+
+        .marker-5 {
+            width: 90px;
+            height: 90px;
+            border-radius: 40%;
+            box-shadow:
+                0 -5px 30px hsla(175, 98%, 53%, 0.8),
+                /* Sombra azul en la parte superior */
+                0 10px 30px hsla(46, 100%, 87%, 0.8);
+            /* Sombra amarilla en la parte inferior */
+        }
+
+        .marker-6 {
+            width: 90px;
+            height: 90px;
+            border-radius: 40%;
+            box-shadow:
+                0 -5px 30px hsla(174, 100%, 60%, 0.8),
+                /* Sombra azul en la parte superior */
+                0 10px 30px hsla(117, 100%, 51%, 0.8);
+            /* Sombra amarilla en la parte inferior */
+        }
+
+        .marker-7 {
+            width: 90px;
+            height: 90px;
+            border-radius: 40%;
+            box-shadow:
+                0 -5px 30px hsla(64, 100%, 53%, 0.8),
+                /* Sombra azul en la parte superior */
+                0 10px 30px hsla(140, 100%, 54%, 0.8);
+            /* Sombra amarilla en la parte inferior */
+        }
+
+        .marker-8 {
+            width: 90px;
+            height: 90px;
+            border-radius: 40%;
+            box-shadow:
+                0 -5px 30px hsla(208, 72%, 44%, 0.8),
+                /* Sombra azul en la parte superior */
+                0 10px 30px hsla(180, 93%, 76%, 0.8);
+            /* Sombra amarilla en la parte inferior */
+        }
+
+        .marker-9 {
+            width: 90px;
+            height: 90px;
+            border-radius: 40%;
+            box-shadow:
+                0 -5px 30px hsla(72, 100%, 52%, 0.8),
+                /* Sombra azul en la parte superior */
+                0 10px 30px hsla(146, 88%, 13%, 0.8);
+            /* Sombra amarilla en la parte inferior */
+        }
+
+        .flip {
+            transform: rotate(180deg);
+        }
+
+        .blob-motion {
+            position: absolute;
+            transform: translateY(-20%)
+        }
+
+        /* whatsapp button */
+        button.wh-ap-btn {
+            outline: none;
+            width: 40px;
+            height: 40px;
+            border: 0;
+            background-color: #2ecc71;
+            padding: 0;
+            border-radius: 100%;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            cursor: pointer;
+            transition: opacity 0.3s, background 0.3s, box-shadow 0.3s;
+        }
+
+        button.wh-ap-btn::after {
+            content: "";
+            background-image: url("//i.imgur.com/cAS6qqn.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 60%;
+            width: 100%;
+            height: 100%;
+            display: block;
+            opacity: 1;
+        }
+
+        button.wh-ap-btn:hover {
+            opacity: 1;
+            background-color: #20bf6b;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        .wh-api {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+
+        .wh-fixed {
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+
+        .wh-fixed>a {
+            display: block;
+            text-decoration: none;
+        }
+
+        /*  button.wh-ap-btn::before {
+            content: "Whatsapp Acri";
+            display: block;
+            position: absolute;
+            margin-left: -110px;
+            margin-top: 16px;
+            height: 25px;
+            background: #49654e;
+            color: #fff;
+            font-weight: 200;
+            font-size: 10px;
+            border-radius: 3px;
+            width: 0;
+            opacity: 0;
+            padding: 0;
+            transition: opacity 0.4s, width 0.4s, padding 0.5s;
+            padding-top: 7px;
+            border-radius: 30px;
+            box-shadow: 0 1px 15px rgba(32, 33, 36, 0.28);
+        } */
+
+        .wh-fixed>a:hover button.wh-ap-btn::before {
+            opacity: 1;
+            width: auto;
+            padding-top: 7px;
+            padding-left: 10px;
+            padding-right: 10px;
+            width: 100px;
+        }
+
+        /* animacion pulse */
+
+        .whatsapp-pulse {
+            width: 40px;
+            height: 40px;
+            right: 10px;
+            bottom: 10px;
+            background: #10b418;
+            position: fixed;
+            text-align: center;
+            color: #ffffff;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 99;
+            display: inline-block;
+            line-height: 65px;
+        }
+
+        .whatsapp-pulse:before {
+            position: absolute;
+            content: "";
+            z-index: -1;
+            bottom: -15px;
+            right: -15px;
+            background-color: #10b418;
+            width: 90px;
+            height: 90px;
+            border-radius: 100%;
+            animation-fill-mode: both;
+            -webkit-animation-fill-mode: both;
+            opacity: 0.6;
+            -webkit-animation: pulse 1s ease-out;
+            animation: pulse 1.8s ease-out;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+
+        @-webkit-keyframes pulse {
+            0% {
+                -webkit-transform: scale(0);
+                opacity: 0;
+            }
+
+            25% {
+                -webkit-transform: scale(0.3);
+                opacity: 1;
+            }
+
+            50% {
+                -webkit-transform: scale(0.6);
+                opacity: 0.6;
+            }
+
+            75% {
+                -webkit-transform: scale(0.9);
+                opacity: 0.3;
+            }
+
+            100% {
+                -webkit-transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            25% {
+                transform: scale(0.3);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(0.6);
+                opacity: 0.6;
+            }
+
+            75% {
+                transform: scale(0.9);
+                opacity: 0.3;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        .facebook {
+            background-color: #3b5998;
+            color: white;
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+
+        }
+
+        .linkedin {
+            background-color: #005983;
+        }
+
+        .linkedin:hover {
+            background-color: #005983;
+        }
+
+        .social-icon {
+            border-radius: 80%;
+            border-width: 80%;
+            color: #333;
+            padding: 10px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+</head>
+
+<header id="navbar"
+    class="fixed top-0 left-0 w-full py-2 flex justify-between font-montserrat text-white transition duration-300 z-50">
+    <div class="logo flex ms-8">
+        <img class="h-20" src="img/LogoBlancoTransparencia.png" alt="" />
+    </div>
+    <nav class="flex items-center space-x-16 text-white">
+        <a class="border-amarillo px-1.5 py-1" href="">Home</a>
+
+
+        <a href="" class="border-amarillo px-1 py-1">Centro de evaluación</a>
+        <div id="puntoRojoRegistrar" class="absolute ps-48 pt-5 -top-0 text-mySin-400 text-xs font-bold">nuevo</div>
+
+        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+            class="border-amarillo flex items-center w-full text-white rounded md:border-0  md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 px-1 py-1">Servicios
+            <img src="img/down.svg" alt=""></button>
+        <div id="dropdownNavbar"
+            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                <li>
+                    <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Seguridad
+                        e Higiene</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Ergonomía</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Laboratorio
+                        de Ensayo</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Capacitación</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Atlas de
+                        Riesgos</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Medio
+                        Ambiente</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Protección
+                        Civil</a>
+                </li>
+            </ul>
+            <div class="py-1">
+                <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Cursos
+                    en línea</a>
+            </div>
+        </div>
+
+    </nav>
+    <div class="flex items-center space-x-4 pe-4">
+        <a class="font-montserrat border-amarillo" href="">Currículum</a>
+        <button
+            class="border-amarillo flex justify-center items-center mx-auto w-32 h-10 rounded-full shadow-lg  bg-tealblue transition duration-4000  font-montserrat text-white text-center text-sm"
+            href="">Contáctanos</button>
+    </div>
+</header>
+
+<body>
+
+    <body class="bg-naviblue">
+
+        <section class="my-32">
+            <h1 class="text-beige text-center font-medium font-size text-4xl h-32 font-outfit" id="top-landing">En ACRI
+                nos hemos
+                integrado <span class="block">a la Red de Prestadores de Servicios</span> <span
+                    class="block font-bold font-playwrite  text-5xl"> del
+                    CONOCER</span>
+            </h1>
+        </section>
+
+        <div class="container mx-auto">
+            <div class="flex">
+
+                <div class="bg-beige rounded-3xl mx-3">
+                    <p class="p-4 text-naviblue text-lg font-poppins align-middle justify-center">
+                        <span class="flex">
+                            <span class="text-2xl font-outfit block text-tealblue font-bold">Potencializando
+                                uno&nbsp;</span>
+                            <span class="text-2xl font-outfit block text-tealblue font-bold">de nuestros
+                                servicios</span>
+                            <img class="h-8 ms-2" src="img/check.svg" alt="">
+                        </span>
+                        que nos han distinguido a lo largo de los años,<span class="font-bold p-2">la capacitación para
+                            el
+                            trabajo.</span>
+
+
+                        <span class="block">
+                            Estamos acreditados como<span class="font-bold p-2 pb-0">centro de evaluación con cédula
+                                CE0096-OC103</span>emitida por el Organismo Certificador Nelkuali y con la autorización
+                            del
+                            CONOCER.
+                        </span>
+                        <!-- <img class="rounded-3xl" src="img/membrete-documentos-Internos.png" alt=""> -->
+                        <button type="button" data-modal-toggle="default-modal"
+                            class="border-amarillo ps-2 flex mt-4 justify-center font-montserrat items-center mx-auto w-36 h-12 rounded-full bg-naviblue transition duration-4000 text-white text-center text-xs">
+                            Ver certificado
+                            <img class="h-9  transition duration-3000" src="img/certificado.svg" alt="">
+                        </button>
+                    </p>
+                </div>
+
+                <div id="default-modal" tabindex="-1" aria-hidden="true"
+                    class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+                    <div class="relative w-full max-w-2xl px-4 h-full md:h-auto">
+                        <!-- Contenido del modal -->
+                        <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
+                            <!-- Encabezado del modal -->
+                            <div class="flex items-start justify-between p-5 border-b rounded-t dark:border-gray-600">
+                                <h3 class="text-gray-900 text-xl lg:text-2xl font-semibold dark:text-white">
+                                    Certificado Centro de Evaluación Acri
+                                </h3>
+                                <!-- Botón para cerrar el modal -->
+                                <button type="button" data-modal-toggle="default-modal"
+                                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <!-- Cuerpo del modal -->
+                            <div class="w-100 h-96">
+                                <iframe src="../certificado.pdf" class="w-full h-full" frameborder="0"></iframe>
+                            </div>
+                            <!-- Pie de página del modal -->
+                            <div
+                                class="flex space-x-2 items-center justify-center p-6 border-t border-gray-200 rounded-b dark:border-gray-600">
+                                <button type="button" data-modal-toggle="default-modal"
+                                    class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600">
+                                    Cerrar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin modal certificado -->
+
+                <div class=" bg-beige rounded-3xl mx-3">
+                    <div class=" p-4">
+                        <div class="font-poppins">
+                            <span class="text-2xl font-outfit block text-tealblue font-bold">Contamos con la
+                                infraestructura y personal</span>
+                            para alinear y evaluar al público interesado
+                            con fines de certificación en los siguientes estándares de competencia:
+                        </div>
+
+                        <div class="pt-10 mx-10 text-2xl text-naviblue font-playwrite flex justify-between">
+
+                            <div data-tooltip-target="tooltip-down-primera" data-tooltip-placement="bottom"
+                                class="font-bold">ECO217.01</div>
+                            <!-- elemento al que le sale el tooltip -->
+                            <p data-tooltip-target="tooltip-down-segunda" data-tooltip-placement="bottom"
+                                class="font-bold">ECO301</p>
+
+                            
+                        </div>
+                    </div>
+                    <div id="tooltip-down-primera" role="tooltip" class="font-montserrat text-naviblue absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium  bg-mySin-500 rounded-lg shadow-sm opacity-2 tooltip dark:bg-skyblue">
+                                Impartición de cursos de formación del capital humano de manera presencial grupal.
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                                <!-- tooltip: -->
+                            <div id="tooltip-down-segunda" role="tooltip"
+                                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-naviblue bg-mySin-500 rounded-lg shadow-sm opacity-2 tooltip dark:bg-gray-700">
+                                Diseño de cursos de formación del capital humano de manera presencial grupal, sus
+                                intrumentos de evaluación y manuales del curso.
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <!-- fin modal -->
+
+        <div class="spacer layer2"></div>
+        <!-- sección ¿cómo es el proceso?... -->
+        <section class="ondas bg-skyblue pt-16">
+            <section class="z-20">
+                <div class="flex h-screen w-full items-center justify-center p-6">
+
+                    <div class="grid h-full w-full xl:grid-cols-12 md:grid-cols-12 gap-3 container"
+                        style="position: relative;">
+                        <div
+                            class="xl:col-span-6 md:col-span-12 sm:col-span-12 row-span-3 bg-mySin-500 rounded-3xl flex justify-center items-center relative overflow-hidden">
+                            <p
+                                class="text-center text-lg md:text-xl sm:text-xl xl:text-4xl mb-10 font-playwrite font-bold text-naviblue relative z-10">
+                                ¿Cómo es el proceso para obtener la certificación de competencias aprovechando esta
+                                promoción?
+                            </p>
+
+                            <!-- SVG ajustado para cubrir todo el ancho y estar centrado -->
+                            <svg id="visual" viewBox="0 0 900 450"
+                                class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-auto z-0"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0" y="0" width="900" height="450" fill="#f4960c"></rect>
+                                <g transform="translate(438.8674766333045 241.9295002658807)">
+                                    <path id="blob1"
+                                        d="M87.9 -85C105 -70.7 104 -35.4 103.6 -0.5C103.1 34.4 103.2 68.8 86 81.3C68.8 93.8 34.4 84.4 0.9 83.5C-32.5 82.5 -65.1 90.1 -82.2 77.6C-99.4 65.1 -101.2 32.5 -102.4 -1.2C-103.6 -34.9 -104.1 -69.8 -86.9 -84.1C-69.8 -98.4 -34.9 -92.2 0.2 -92.5C35.4 -92.7 70.7 -99.4 87.9 -85"
+                                        fill="#fab316"></path>
+                                </g>
+                                <g transform="translate(469.32639005209256 225.8479015597448)"
+                                    style="visibility: hidden">
+                                    <path id="blob2"
+                                        d="M81.6 -73.1C106.6 -56.6 128.3 -28.3 125.3 -2.9C122.4 22.4 94.8 44.8 69.8 65C44.8 85.1 22.4 103.1 2.4 100.7C-17.7 98.3 -35.4 75.7 -53.4 55.5C-71.4 35.4 -89.7 17.7 -93.9 -4.2C-98.2 -26.2 -88.3 -52.3 -70.3 -68.8C-52.3 -85.3 -26.2 -92.2 1.1 -93.2C28.3 -94.3 56.6 -89.6 81.6 -73.1"
+                                        fill="#fab316"></path>
+                                </g>
+                            </svg>
+
+                            <script>
+                                const tween = KUTE.fromTo(
+                                    '#blob1',
+                                    { path: '#blob1' },
+                                    { path: '#blob2' },
+                                    { repeat: 999, duration: 3000, yoyo: true }
+                                );
+                                tween.start();
+                            </script>
+                        </div>
+
+                        <div
+                            class="text-center xl:col-span-3 md:col-span-6 sm:col-span-12 row-span-1 bg-naviblue rounded-3xl justify-center items-center">
+
+                            <p
+                                class="text-skyblue text-center text-md xl:text-lg md:text-sm sm:text-sm font-poppins pt-2">
+                                I. Contáctanos al correo <span class="font-bold">contacto@acrisc.com.mx</span> para
+                                recibir
+                                información.
+                                <span class="font-poppins break">¡Resolveremos <span class="font-bold">todas</span> las
+                                    dudas que
+                                    tengas!</span>
+                            </p>
+
+                            <div class="border-white-800 flex justify-center items-center">
+                                <img class="h-24 mx-auto" src="3dicons/chat-buble.png" alt="">
+                                <!-- <span class="text-white">1</span> -->
+                                <div class="pulse_0"></div>
+                                <div class="pulse_1"></div>
+                            </div>
+
+
+                        </div>
+
+                        <div style="background-color:hsla(193,0%,100%,1);
+                    background-image:
+                    radial-gradient(at 76% 24%, hsla(129,100%,64%,1) 0px, transparent 50%),
+                    radial-gradient(at 31% 100%, hsla(150,84%,39%,1) 0px, transparent 50%),
+                    radial-gradient(at 29% 10%, hsla(162,69%,68%,1) 0px, transparent 50%);"
+                            class="xl:col-span-3 md:col-span-6 sm:col-span-12 row-span-1 border-2 rounded-3xl flex flex-col justify-center items-center text-center space-y-4 p-6">
+
+                            <img src="img/LogoOriginalTransparencia.png" alt="">
+
+                            <div class="wh-api">
+                                <div class="wh-fixed whatsapp-pulse">
+                                    <a href="https://api.whatsapp.com/send?phone=0000000000000&text=hello world">
+                                        <button class="wh-ap-btn"></button>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="xl:col-span-3 md:col-span-4 sm:col-span-12 row-span-3 bg-naviblue rounded-3xl justify-center items-center text-center pt-2">
+
+                            <p class="text-beige text-center text-md xl:text-md md:text-sm sm:text-sm font-poppins">
+                                II. Llena las fichas de inscripción.
+                            </p>
+                            <p class="text-beige text-md xl:text-md md:text-sm sm:text-sm font-poppins">
+                                Solicita tu cotización, confírmala y efectúa tu pago.
+                                <span class="font-bold">¡Te ofrecemos diversas opciones!</span>
+                            </p>
+
+                            <div class=" bg-white-100 flex justify-center items-center">
+                                <img class="h-32" src="3dicons/money.png" alt="" class="mx-auto">
+                                <div class="pulse_0"></div>
+                                <div class="pulse_1"></div>
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="xl:col-span-3 md:col-span-4 sm:col-span-12 row-span-3 bg-mySin-500 rounded-3xl flex flex-col justify-center items-center">
+                            <p
+                                class="text-beige font-poppins text-sm xl:text-md md:text-md sm:text-sm ps-2 text-center pt-2">
+                                III. Realiza la <span class="font-bold">evaluación diagnóstica</span> de cada estándar
+                                de
+                                competencia.
+                            </p>
+                            <p class="text-beige text-sm xl:text-md md:text-md sm:text-sm pe-2 text-center">
+                                De acuerdo al resultado se acuerda la Alineación y el plan de evaluación.
+                            </p>
+
+                            <!-- Imagen centrada debajo de los párrafos -->
+                            <div class=" bg-white-100 text-center mt-4">
+                                <img class="h-24" src="3dicons/pencil.png" alt="" class="mx-auto">
+                                <div class="pulse_0"></div>
+                                <div class="pulse_1"></div>
+                            </div>
+                        </div>
+
+
+
+                        <div
+                            class="xl:col-span-6 md:col-span-4 sm:col-span-12 row-span-3 bg-white rounded-3xl flex justify-center border-skyblue border-2 items-center">
+                            <img class="h-auto rounded-3xl" src="img/membrete-documentos-Internos.png" alt="">
+                        </div>
+
+                        <div
+                            class="xl:col-span-6 md:col-span-6 sm:col-span-12  bg-naviblue rounded-3xl flex justify-center items-center">
+                            <div class="flex items-center ps-2">
+                                <img class="h-24 " src="3dicons/video-cam.png" alt="">
+                                <!-- <span class="text-white">1</span> -->
+                                <div class="pulse_0"></div>
+                                <div class="pulse_1"></div>
+                            </div>
+                            <p class="text-white text-sm xl:text-xl md:text-lg sm:text-sm ps-2 font-poppins">
+                                IV. Inicio de alineación: Modalidad a distancia (ZOOM). *Todas las sesiones quedan
+                                grabadas.
+                            </p>
+                        </div>
+
+                        <div
+                            class="xl:col-span-6 md:col-span-6 sm:col-span-12  bg-mySin-500 rounded-3xl flex justify-center items-center">
+                            <p class="text-beige text-sm xl:text-xl md:text-lg sm:text-sm font-poppins">
+                                V. Inicio de evaluación: Lugar, fecha y hora.
+                            </p>
+                            <div class=" flex items-center ">
+                                <div class=" bg-white-100 flex items-center ">
+                                    <img class="h-24" src="3dicons/color.png" alt="">
+                                    <!-- <span class="text-white">1</span> -->
+                                    <div class="pulse_0"></div>
+                                    <div class="pulse_1"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="xl:col-span-6 md:col-span-6 sm:col-span-12 bg-naviblue rounded-3xl flex justify-center items-center">
+                            <p class="text-beige text-sm xl:text-sm md:text-sm sm:text-sm ps-2 pe-2 font-poppins">
+                                VI. Realiza tu evaluación con fines de certificación.</p>
+
+                            <span class="text-beige text-sm xl:text-md md:text-md sm:text-sm font-poppins"><span
+                                    class="block"><span class="font-bold">Nota:</span><span> Si es declarado candidato
+                                        no competente en
+                                        algún
+                                        estándar, se recomendará:</span>
+
+                                    <p class="text-beige text-sm xl:text-md md:text-md sm:text-sm font-poppins">
+                                        I. Cursar la alineación.
+                                    </p>
+                                    <p class="text-beige text-sm xl:text-md md:text-md sm:text-sm font-poppins">
+                                        II. Realizar la evaluación, cubriendo el costo correspondiente.
+                                    </p>
+
+                        </div>
+                        <div
+                            class="xl:col-span-6 md:col-span-6 sm:col-span-12 bg-naviblue rounded-3xl flex justify-center items-center">
+                            <p
+                                class="text-beige text-sm xl:text-sm md:text-sm sm:text-sm ps-2 text-center font-poppins">
+                                VII. Cuando el candidato es declarado <span class="font-bold">competente,</span> se
+                                procede
+                                con
+                                la
+                                gestión del certificado ante el organismo certificador.
+                            </p>
+                        </div>
+                        <!-- <div
+                        class="xl:col-span-6 md:col-span-6 sm:col-span-12 bg-mySin-600 rounded-3xl flex justify-center items-center">
+                        hola 10</div> -->
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+        <section class="ondas bg-beige">
+            <div class="spacer layer4"></div>
+            <img src="../rombos-verdes.svg" alt="">
+            <!-- <div class="spacer layer3"></div> -->
+
+            <h1 class="text-center mt-14 justify-center text-xl sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl mb-40 font-playwrite font-bold text-naviblue"
+                style="position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%);">
+                Fechas y Horarios 2024
+            </h1>
+
+            <div class="mb-10">
+                <h2 class="text-xl font-montserrat">Inscripciones hasta el 8 de noviembre</h2>
+                <h2 class="text-xl font-montserrat">Alineación del 11 al 22 de noviembre</h2>
+            </div>
+            <!-- <div class="custom-shape-divider-top-1729887734">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div> -->
+
+            <!-- Show tooltip on left -->
+
+
+
+            <div id="tooltip-left" role="tooltip"
+                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-black bg-mySin-300 rounded-lg shadow-sm opacity-2 tooltip dark:bg-gray-700">
+                Cierre de inscripciones
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+
+            <div id="tooltip-left-alineacion" role="tooltip"
+                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-naviblue rounded-lg shadow-sm opacity-2 tooltip dark:bg-gray-700">
+                Alineación <br>
+                Lunes-Miercoles-Viernes <br>
+                16:00 - 18:00 hrs
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+
+            <div id="tooltip-left-evaluaciones" role="tooltip"
+                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-forestGreen-700 rounded-lg shadow-sm opacity-2 tooltip dark:bg-gray-700">
+                Evaluaciones <br>
+                del 07 al 11 de noviembre <br>
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+
+
+        </section>
+
+
+        <section class="bg-beige">
+            <div class="bg-beige pb-10 pt-10 flex flex-col items-center text-center">
+
+                <p data-tooltip-target="tooltip-left" data-tooltip-placement="left"
+                    class="border-amarillo mb-2 md:mb-0 text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 border-2 p-2 inline-block w-20  bg-bluewood-900">
+                    VIE</p>
+
+
+                <div data-tooltip-target="tooltip-left-alineacion" data-tooltip-placement="left"
+                    class="azul-alineacion text-center flex flex-col items-center">
+
+                    <p class="rounded-lg   p-2 inline-block w-20  bg-bluewood-900 text-white">LUN</p>
+                    <p class="rounded-lg   p-2 inline-block w-20  bg-bluewood-900 text-white">MAR</p>
+                    <p class="rounded-lg   p-2 inline-block w-20  bg-bluewood-800 text-white">MIE</p>
+                    <p class="rounded-lg   p-2 inline-block w-20 bg-bluewood-800 text-white">JUE</p>
+                    <p class="rounded-lg  p-2 inline-block w-20 bg-bluewood-700 text-white">VIE</p>
+                    <p class="rounded-lg  p-2 inline-block w-20 bg-bluewood-700 text-white">LUN</p>
+                    <p class="rounded-lg  p-2 inline-block w-20 bg-bluewood-600 text-white">MAR</p>
+                    <p class="rounded-lg  p-2 inline-block w-20 bg-bluewood-600 text-white">MIE</p>
+                    <p class="rounded-lg  p-2 inline-block w-20 bg-bluewood-500">JUE</p>
+                    <p class="rounded-lg border border-tealblue p-2 inline-block w-20 bg-bluewood-400">VIE</p>
+                </div>
+
+                <div data-tooltip-target="tooltip-left-evaluaciones" data-tooltip-placement="left"
+                    class="verde-evaluacion text-center flex flex-col items-center">
+                    <p class="rounded-lg p-2 inline-block w-20 bg-bluewood-300">LUN</p>
+                    <p class="rounded-lg p-2 inline-block w-20 bg-bluewood-200">. <br> . <br> .</p>
+                    <p class="rounded-lg p-2 inline-block w-20 bg-bluewood-100">VIE</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="spacer layer1"></div>
+
+        <section class=" bg-naviblue mb-16">
+            <h1
+                class="text-center pt-20 text-xl sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-playwrite font-bold text-beige">
+                Inversión</h1>
+            <div class="flex justify-center pt-20">
+                <div
+                    class="container relative border border-white sm:w-96 md:w-1/2 lg:w-1/3 xl:w-1/4 rounded-2xl overflow-hidden me-5">
+                    <div class="absolute inset-0 bg-beige opacity-40"></div>
+                    <div class="relative z-10 flex justify-center items-center font-montserrat ps-2 pe-2 text-center">
+                        <p class="text-2xl mt-2 font-outfit text-beige">Alineación</p>
+                    </div>
+
+                    <div class="text-beige text-center">
+                        <img class="h-24 mx-auto" src="../book.svg" alt="">
+                        <p class="text-2xl font-bold">EC0217.01</p>
+                        <p class="text-2xl font-bold">EC0301</p>
+                        <h5>Inversión:</h5>
+                        <p class="text-2xl font-montserrat">$875.00 mn c/u</p>
+                    </div>
+                </div>
+
+                <div
+                    class="container container-dos mt-10 relative border border-white sm:w-96 md:w-1/2 lg:w-1/3 xl:w-1/4 rounded-2xl overflow-hidden">
+                    <div class="absolute inset-0 bg-beige opacity-40"></div>
+                    <div class="relative z-10 flex justify-center items-center font-montserrat ps-2 pe-2 text-center">
+                        <p class="text-xl mt-2 font-outfit text-beige">Proceso de evaluación con fines de certificación
+                        </p>
+                    </div>
+                    <div class="text-beige text-center">
+                        <img class="h-24 mx-auto" src="../history_dos.svg" alt="">
+                        <p class="text-2xl font-bold"> EC0217.01</p>
+                        <P class="text-2xl font-bold">EC0301</P>
+                        <h5>Inversión:</h5>
+                        <p class="text-2xl font-montserrat ">$875.00 mn c/u</p>
+                    </div>
+                </div>
+                <div
+                    class="container relative border border-white sm:w-96 md:w-1/2 lg:w-1/3 xl:w-1/4 rounded-2xl overflow-hidden ms-5">
+                    <div class="absolute inset-0 bg-beige opacity-40"></div>
+                    <div class="relative z-10 flex justify-center items-center font-montserrat ps-2 pe-2 text-center">
+                        <p class="text-2xl mt-2 font-outfit text-beige">Certificación</p>
+                    </div>
+                    <div class="text-beige text-center">
+                        <img class=" h-24 mx-auto" src="../school.svg" alt="">
+                        <p class="text-2xl font-bold"> EC0217.01</p>
+                        <P class="text-2xl font-bold">EC0301</P>
+                        <h5>Inversión:</h5>
+                        <p class="text-2xl font-montserrat ">$900.00 mn c/u</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-16 pb-20" style="background-color:hsla(212,29%,26%,0.15);
+        background-image:
+        radial-gradient(at 9% 52%, hsla(54,53%,32%,0.17) 0px, transparent 50%),
+        radial-gradient(at 99% 58%, hsla(212,100%,42%,0.23) 0px, transparent 50%),
+        radial-gradient(at 52% 43%, hsla(118,81%,33%,0.2) 0px, transparent 50%)">
+            <h1
+                class="text-center pt-20 text-xl sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-playwrite font-bold text-beige">
+                ¿Todavía no te convences?</h1>
+
+            <div class="flex justify-center pt-20 ">
+                <div class=" sm:w-96 md:w-1/2 lg:w-1/3 xl:w-1/2">
+                    <div class="text-beige text-center pb-20">
+                        <p class="text-2xl font-poppins text-beige py-10">Estamos siempre disponibles y a solo un
+                            mensaje de distancia para responder todas tus dudas</p>
+                        <button
+                            class="border-amarillo hover:bg-skyblue flex justify-center items-center mx-auto w-40 h-12 rounded-full shadow-lg  bg-beige transition duration-4000  font-montserrat text-naviblue text-center text-sm"
+                            href="">Contáctanos</button>
+                        <p class="text-2xl font-poppins text-beige py-10">¡Nos encantará saber de ti!</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="pt-20 bg-bluewood-950">
+            <div class="flex justify-between">
+                <h2 class="ms-20 text-beige text-lg font-montserrat">
+                    LA EDUCACIÓN NO ES PREPARACIÓN PARA LA VIDA; LA EDUCACIÓN ES LA VIDA MISMA.
+                    <span class="block text-sm"> -John Dewey</span>
+                </h2>
+                <!-- <div class="flex">
+                    <a href="https://www.facebook.com/people/ACRI-Asesoria-y-Capacitaci%C3%B3n-en-Riesgos-Industriales-SC/100064056279616/"
+                        target="_blank">
+                        <img class="h-12 me-7 social-icon facebook" src="img/facebook.svg" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/acri.sc/?igsh=MW14NmE3ajJieWd1bw%3D%3D" target="_blank">
+                        <img class="h-12 me-7 social-icon instagram" src="img/instagram.svg" alt="">
+                    </a>
+                    <a href="https://www.linkedin.com/company/acri-s-c/mycompany/" target="_blank">
+                        <img class="me-24 h-12 social-icon linkedin" src="img/linkedin.svg" alt="">
+                    </a>
+                </div> -->
+            </div>
+            <div class="border-beige border-t-[1px] max-w-6xl mt-5 mb-10"></div>
+
+            <div class="flex justify-between ps">
+                <div class="ms-16">
+                    <img class="w-44" src="img/LogoBlancoTransparencia.png" alt="">
+                    <div class="mt-10 mb-10 flex">
+                        <input class="rounded-md w-60 py-2 text-black font-montserrat" type="email"
+                            placeholder="Tu correo">
+                        <button
+                            class="text-xs w-32 py-2 rounded-md bg-mySin-500 hover:bg-mySin-300 transition duration-500 text-black font-playwrite">¡Quiero
+                            que me contacten!</button>
+                    </div>
+                </div>
+                <div class="text-white">
+                    <div class="text-white font-playwrite mb-8">acri</div>
+
+                    <div class="flex">
+                        <img class="h-6" src="img/chevron_right.svg" alt="">
+                        <a class="font-montserrat  hover:text-mySin-300 transition duration-400 block" href=""> Acerca
+                            de Nosotros</a>
+                    </div>
+
+                    <div class="flex">
+                        <img class="h-6" src="img/chevron_right.svg" alt="">
+                        <a class="font-montserrat  hover:text-mySin-300 transition duration-400 block"
+                            href="">Servicios</a>
+                    </div>
+                    <div class="flex">
+                        <img class="h-6" src="img/chevron_right.svg" alt="">
+                        <a class="font-montserrat  hover:text-mySin-300 transition duration-400" href="">Clientes</a>
+                    </div>
+                </div>
+
+                <div class="text-white">
+                    <div class="text-white font-playwrite mb-8">También nos puedes contactar en:</div>
+                    <div class="flex mb-8">
+                        <a href="https://www.facebook.com/people/ACRI-Asesoria-y-Capacitaci%C3%B3n-en-Riesgos-Industriales-SC/100064056279616/"
+                            target="_blank">
+                            <img class="h-12 me-7 social-icon facebook" src="img/facebook.svg" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/acri.sc/?igsh=MW14NmE3ajJieWd1bw%3D%3D" target="_blank">
+                            <img class="h-12 me-7 social-icon instagram" src="img/instagram.svg" alt="">
+                        </a>
+                        <a href="https://www.linkedin.com/company/acri-s-c/mycompany/" target="_blank">
+                            <img class="me-24 h-12 social-icon linkedin" src="img/linkedin.svg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="flex">
+                        <img class="h-6" src="img/chevron_right.svg" alt="">
+                        <a class="font-montserrat mb-3 hover:text-mySin-300 transition duration-400 block"
+                            href="">Solicitud de servicio o cotización, comentario o felicitación</a>
+                    </div>
+
+                    <div class="flex">
+                        <img class="h-6" src="img/chevron_right.svg" alt="">
+                        <a class="font-montserrat flex-none hover:text-mySin-300 transition duration-400"
+                            href="">Queja</a>
+                    </div>
+                </div>
+
+                <div class="text-white me-16">
+                    <div class=" text-white font-playwrite mb-8">Privacidad</div>
+                    <div class="flex">
+                        <img class="h-6" src="img/chevron_right.svg" alt="">
+                        <a class="font-montserrat  hover:text-mySin-300 transition duration-400" href="">Aviso de
+                            Privacidad</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="border-beige border-t-[1px] max-w-4xl mt-4"></div>
+            <p class="text-white ms-20 font-montserrat  mt-4 mb-4">Lindavista, Gustavo A. Madero 07300, Ciudad de México
+            </p>
+
+            <div class="fixed bottom-0 right-0 mb-24 mr-4">
+                <a href="#top-landing">
+                    <img class="bg-slate-600 hover:bg-blue-400 transition duration-500 h-12 rounded-full pb-2"
+                        src="img/chevron-up.svg" alt="">
+                </a>
+            </div>
+        </footer>
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+        <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
+        <script src="app.js"></script>
+    </body>
+
+</html>
